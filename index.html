@@ -57,6 +57,23 @@
             background-color: purple;
             color: white;
         }
+        .main{
+            box-sizing: border-box;
+            height: 55vh;
+        }
+        footer{
+            display: flex;
+            width: 100vw;
+            justify-content: center;
+            align-items: center;
+            align-content: center;
+            position:fixed;
+            bottom:0;
+            background-color: black;
+            color: white;
+            font-size: 1rem;
+            padding: 2%;
+        }
     </style>
 </head>
 <body id="body">
@@ -64,8 +81,9 @@
     <button class="buttons" id="rb" onclick="rcolor()">RED</button>
     <button class="buttons" id="gb" onclick="gcolor()">GREEN</button>
     <button class="buttons" id="pb" onclick="pcolor()">PURPLE</button>
-    <p id="demo"></p>
-    <footer>Created by Ashish kr anand </footer>
+    
+    <div class="main"><p id="demo"></p></div>
+    <footer>created by Ashish Kumar Anand</footer>
     <script>
         function bcolor(){
             var para = document.getElementById('demo');
