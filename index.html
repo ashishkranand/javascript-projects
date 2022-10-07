@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color changer</title>
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 1.5s;
+            box-sizing: border-box;
+        }
+        .buttons{
+            margin: 1%;
+            padding: 2%;
+            width: 22%;
+            background-color: cadetblue;
+            font-weight: 800;
+            cursor: pointer;
+            border-radius: 9px;
+            overflow: hidden;
+        }
+        .buttons::first-letter{
+            color: darkblue;
+            font-size: 21px;
+        }
+        .buttons:hover{
+            box-sizing: border-box;
+            box-shadow: 4px 5px 4px rgb(149, 144, 144);
+            letter-spacing: 6px;
+        }
+        p{
+            font-size: 3rem;
+            text-align: center;
+            margin-top: 10%;
+        }
+        
+        #bb{
+            background-color: black;
+            color: white;
+        }
+        #rb{
+            background-color: red;
+            color: white;
+        }
+        #gb{
+            background-color: green;
+            color: white;
+        }
+        #pb{
+            background-color: purple;
+            color: white;
+        }
+    </style>
+</head>
+<body id="body">
+    <button class="buttons" id="bb" onclick="bcolor()">BLACK</button>
+    <button class="buttons" id="rb" onclick="rcolor()">RED</button>
+    <button class="buttons" id="gb" onclick="gcolor()">GREEN</button>
+    <button class="buttons" id="pb" onclick="pcolor()">PURPLE</button>
+    <p id="demo"></p>
+    <script>
+        function bcolor(){
+            var para = document.getElementById('demo');
+            para.className ="animate__animated animate__bounce";
+            document.getElementById('demo').innerHTML = "Hello i am Black color"
+            document.getElementById('body').style.backgroundColor="black"
+            document.getElementById('body').style.color="white"
+            document.getElementById('bb').style.backgroundColor="yellow"
+            document.getElementById('bb').style.color="black"
+            document.getElementById('rb').style.backgroundColor="red"
+            document.getElementById('rb').style.color="black"
+            document.getElementById('gb').style.backgroundColor="green"
+            document.getElementById('gb').style.color="white"
+            document.getElementById('pb').style.backgroundColor="purple"
+            document.getElementById('pb').style.color="white"
+        }
+        function rcolor(){
+            var para = document.getElementById('demo');
+            para.className ="animate__animated animate__bounce";
+            document.getElementById('demo').innerHTML = "Hello i am Red color"
+            document.getElementById('body').style.backgroundColor="red"
+            document.getElementById('body').style.color="white"
+            document.getElementById('rb').style.backgroundColor="yellow"
+            document.getElementById('rb').style.color="black"
+            document.getElementById('bb').style.backgroundColor="black"
+            document.getElementById('bb').style.color="white"
+            document.getElementById('gb').style.backgroundColor="green"
+            document.getElementById('gb').style.color="white"
+            document.getElementById('pb').style.backgroundColor="purple"
+            document.getElementById('pb').style.color="white"
+        }
+        function gcolor(){
+            var para = document.getElementById('demo');
+            para.className ="animate__animated animate__bounce";
+            document.getElementById('demo').innerHTML = "Hello i am Green color"
+            document.getElementById('body').style.backgroundColor="green"
+            document.getElementById('body').style.color="white"
+            document.getElementById('gb').style.backgroundColor="yellow"
+            document.getElementById('gb').style.color="black"
+            document.getElementById('rb').style.backgroundColor="red"
+            document.getElementById('rb').style.color="black"
+            document.getElementById('bb').style.backgroundColor="black"
+            document.getElementById('bb').style.color="white"
+            document.getElementById('pb').style.backgroundColor="purple"
+            document.getElementById('pb').style.color="white"
+        }
+        function pcolor(){
+            var para = document.getElementById('demo');
+            para.className ="animate__animated animate__bounce";
+            document.getElementById('demo').innerHTML = "Hello i am Purple color"
+            document.getElementById('body').style.backgroundColor="purple"
+            document.getElementById('body').style.color="white"
+            document.getElementById('pb').style.backgroundColor="yellow"
+            document.getElementById('pb').style.color="black"
+            document.getElementById('gb').style.backgroundColor="green"
+            document.getElementById('gb').style.color="black"
+            document.getElementById('rb').style.backgroundColor="red"
+            document.getElementById('rb').style.color="black"
+            document.getElementById('bb').style.backgroundColor="black"
+            document.getElementById('bb').style.color="white"
+        }
+    </script>
+</body>
+</html>
